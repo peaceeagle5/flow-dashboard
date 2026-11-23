@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js (MIT licence) from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+  <header>
+    <h1>Flow Dashboard</h1>
+    <p class="subtitle">Wann ist heute die beste Zeit für Tai Chi, Yoga oder einen Spaziergang?</p>
+    <p class="location" id="location"></p>
+  </header>
+
+  <main>
+    <!-- Step 2: weather chart (working) -->
+    <section class="card wide">
+      <h2>Wetter heute</h2>
+      <p class="status" id="weather-status">Lade Wetterdaten …</p>
+      <canvas id="weather-chart"></canvas>
+    </section>
+
+    <!-- Step 3: placeholders for the other data sources -->
+    <section class="card" id="water-card">
+      <h2>Spree – Wasserstand</h2>
+      <p class="todo">TODO: PEGELONLINE anbinden</p>
+    </section>
+
+    <section class="card" id="air-card">
+      <h2>Luftqualität</h2>
+      <p class="todo">TODO: Umweltbundesamt Luftdaten anbinden</p>
+    </section>
+
+    <section class="card" id="best-time-card">
+      <h2>Beste Zeit heute</h2>
+      <p class="todo">TODO: Regeln für das beste Zeitfenster (Schritt 4)</p>
+    </section>
+
+    <section class="card" id="verse-card">
+      <h2>Vers des Tages</h2>
+      <p class="todo">TODO: Bhagavad Gita API anbinden</p>
+    </section>
+  </main>
+
+  <footer>
+    Daten: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0)
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

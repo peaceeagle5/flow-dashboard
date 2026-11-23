@@ -1,0 +1,6 @@
+node_modules/
+.env
+.DS_Store
+
+# Personal notes for Claude, kept local
+CLAUDE.md
