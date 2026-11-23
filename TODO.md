@@ -23,6 +23,13 @@ Ziel: Ein Dashboard, das Spree-Wasserstand, Wetter und Luftqualität kombiniert 
 - [ ] Wasserstand der letzten Tage als Liniendiagramm
 - [ ] `fetchAirQuality()` – Luftqualitätsindex der nächsten Station
 - [ ] `fetchVerse()` – zufälliger Vers des Tages
+- [ ] Textauswahl für den Vers des Tages (Dropdown `<select>`, Auswahl in `localStorage` merken)
+  - [ ] Gemeinsames Format festlegen: `{ text, reference, source }`
+  - [ ] Ein Adapter pro Quelle, der die API-Antwort in dieses Format umwandelt
+  - [ ] Bhagavad Gita – vedicscriptures (`vedicscriptures.github.io/slok/2/47/`, Slash am Ende nötig!)
+  - [ ] Bibel – bible-api.com, Luther 1912 (`bible-api.com/data/luther1912/random`)
+  - [ ] Koran – alquran.cloud, Bubenheim (`api.alquran.cloud/v1/ayah/262/de.bubenheim`, Verse 1–6236)
+  - [ ] Buddhismus – SuttaCentral, Dhammapada auf Deutsch, Übersetzung Sabbamitta (`suttacentral.net/api/bilarasuttas/dhp1-20/sabbamitta?lang=de`, Text in `translation_text`, eine Zeile pro Schlüssel wie `dhp1:1`)
 - [ ] Ladezustände und Fehlermeldungen für jede Karte
 
 ## Schritt 4 – „Beste Zeit"-Logik
