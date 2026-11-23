@@ -31,3 +31,8 @@ Below each step, write the code line that does it. Call the function fetchMuehle
 4. **return the value of pegelMuehle**
     
         return pegelMuehle; }
+
+## Remember
+- `async` on the function, `await` on the line
+- `fetch` = the browser's built-in tool; my own function gets my own name
+- `fetch` gets the reply (envelope) → `antwort.json()` opens it (with `()`!)
