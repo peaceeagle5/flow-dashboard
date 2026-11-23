@@ -16,7 +16,7 @@ Ziel: Ein Dashboard, das Spree-Wasserstand, Wetter und Luftqualität kombiniert 
 - [x] Wetterdaten von Open-Meteo laden
 - [x] Temperatur, Wind und Regen als Chart.js-Diagramm anzeigen
 - [ ] Projekt mit Live Server öffnen und testen
-- [ ] Git-Repo anlegen und auf GitHub pushen
+- [x] Git-Repo anlegen und auf GitHub pushen
 
 ## Schritt 3 – Weitere Datenquellen
 - [ ] `fetchWaterLevel()` – aktueller Spree-Wasserstand + Trend
