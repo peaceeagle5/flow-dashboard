@@ -89,9 +89,6 @@ function renderWeatherChart(data) {
 
 async function init() {
   document.getElementById("location").textContent = `Ort: ${LOCATION.name}`;
-  const pegel = await fetchWaterLevel()
-  document.getElementById("water-value").textContent = `Lade Wasserstand: ${pegel.value} cm`;
-  document.getElementById("water-status").textContent = "";
   const status = document.getElementById("weather-status");
 
   try {
@@ -104,6 +101,17 @@ async function init() {
     status.classList.add("error");
   }
 
+  const waterStatus = document.getElementById("water-status");
+
+  try {
+    const pegel = await fetchWaterLevel();
+    document.getElementById("water-value").textContent = `${pegel.value} cm`;
+    waterStatus.textContent = "";
+  } catch (error) {
+    console.error(error);
+    waterStatus.textContent = `Wasserstand konnte nicht geladen werden: ${error.message}`;
+    waterStatus.classList.add("error");
+  }
   // TODO (Step 3): fetchWaterLevel(), fetchAirQuality(), fetchVerse()
   // TODO (Step 4): findBestTimeWindow(weather, air)
 }
