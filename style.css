@@ -45,6 +45,13 @@ main {
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
+.big-value { 
+  font-size: 2.2rem; 
+  font-weight: 600;
+  color: var(--water); 
+  margin: .25rem 0; 
+}
+
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, .1);

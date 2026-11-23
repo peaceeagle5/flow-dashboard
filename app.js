@@ -27,6 +27,12 @@ async function fetchWeather() {
   return response.json();
 }
 
+async function fetchWaterLevel() {
+  const antwort = await fetch("https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/47d3e815-c556-4e1b-93de-9fe07329fb00/W/currentmeasurement.json");
+  const pegel = await antwort.json();
+  return pegel;
+}
+
 function renderWeatherChart(data) {
   const hours = data.hourly.time.map((t) => t.slice(11, 16)); // "2026-11-23T14:00" -> "14:00"
 
@@ -83,6 +89,9 @@ function renderWeatherChart(data) {
 
 async function init() {
   document.getElementById("location").textContent = `Ort: ${LOCATION.name}`;
+  const pegel = await fetchWaterLevel()
+  document.getElementById("water-value").textContent = `Lade Wasserstand: ${pegel.value} cm`;
+  document.getElementById("water-status").textContent = "";
   const status = document.getElementById("weather-status");
 
   try {
