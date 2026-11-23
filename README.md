@@ -2,6 +2,8 @@
 
 Ein Dashboard, das Daten aus mehreren offenen APIs zusammenführt und vorschlägt, wann heute die beste Zeit für Tai Chi, Yoga oder einen Spaziergang draußen ist.
 
+**Live-Demo:** https://peaceeagle5.github.io/flow-dashboard/
+
 ## Datenquellen
 | Quelle | Daten | Status |
 |---|---|---|
