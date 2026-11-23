@@ -1,0 +1,17 @@
+Step1: Words
+    1. create an async function with name
+    2. create a container(variable) to await and fetch the data with a query
+    3. create a variable to be used to format the output with
+    4. return output.variable
+
+Step2: Code
+async function fetchVerse() {
+    const antwort = await fetch("https://bible-api.com/?random=verse&translation=luther1912");
+    const verse = await antwort.json();
+    return verse;
+}
+
+Step3: Test and explore
+ reference: "Nehemia 9:32", 
+ verses: (1) […], text: "Nun, unser Gott, du großer Gott, mächtig und schrecklich, der du hältst Bund und Barmherzigkeit, achte nicht gering alle die Mühsal, die uns getroffen hat, unsre Könige, Fürsten, Priester, Propheten, Väter und dein ganzes Volk von der Zeit an der Könige von Assyrien bis auf diesen Tag."
+ book name: "Nehemia"
