@@ -1,0 +1,30 @@
+Gut, dann zum Trend. Wir gehen vor wie in deiner `training.md`: erst die Daten anschauen, dann in Worten beschreiben, dann Code.
+
+## Teil A: Daten anschauen
+
+Für den Trend reicht ein einzelner Messwert nicht. Du brauchst **mehrere Messwerte über die Zeit**. PEGELONLINE hat dafür einen eigenen Endpunkt. Öffne ihn im Browser:
+
+```
+https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/47d3e815-c556-4e1b-93de-9fe07329fb00/W/measurements.json?start=P1D
+```
+
+`P1D` ist ein Standardformat für Zeitdauern (ISO 8601) und heißt **„Period: 1 Day"**, also die letzten 24 Stunden. `P7D` wären 7 Tage. Das brauchen wir später für das Liniendiagramm.
+
+Beantworte beim Anschauen diese Fragen:
+
+1. Was ist der Unterschied zu `currentmeasurement.json`? Achte auf die erste Klammer: `{` oder `[`?
+2. Wie sieht **ein** Eintrag aus?
+3. Steht der **neueste** Messwert oben oder unten?
+4. In welchem Abstand wird gemessen? Ungefähr wie viele Einträge sind es dann für 24 Stunden?
+
+**Tipp:** Firefox zeigt JSON schön formatiert an. In Chrome gibt es oben ein Häkchen „Pretty print".
+
+## Teil B: In Worten (noch kein Code!)
+
+Schreib in 3–4 Schritten auf, wie du aus dieser Liste herausfindest, ob die Spree **steigt, fällt oder gleich bleibt**. Schreib es so, als würdest du es einem Menschen erklären, der die Liste auf Papier vor sich hat.
+
+Eine Frage zum Nachdenken: Ist ein Unterschied von **1 cm** schon „steigt"? Oder ist das eher Messrauschen?
+
+---
+
+Schick mir deine Antworten auf A und B. Danach schreiben wir den Code. Du brauchst dafür etwas Neues, nämlich wie man in einer **Liste (Array)** an den ersten und letzten Eintrag kommt, und das üben wir dann kurz in der Console.

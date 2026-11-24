@@ -28,9 +28,11 @@ async function fetchWeather() {
 }
 
 async function fetchWaterLevel() {
-  const antwort = await fetch("https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/47d3e815-c556-4e1b-93de-9fe07329fb00/W/currentmeasurement.json");
-  const pegel = await antwort.json();
-  return pegel;
+  const response = await fetch("https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/47d3e815-c556-4e1b-93de-9fe07329fb00/W/currentmeasurement.json");
+  if (!response.ok) {
+    throw new Error(`Status ${response.status}`);
+  }
+  return response.json();
 }
 
 function renderWeatherChart(data) {

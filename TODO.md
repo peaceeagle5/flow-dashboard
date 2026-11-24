@@ -3,9 +3,9 @@
 Ziel: Ein Dashboard, das Spree-Wasserstand, Wetter und Luftqualität kombiniert und die beste Zeit für Tai Chi, Yoga oder einen Spaziergang vorschlägt – mit einem Vers des Tages.
 
 ## Schritt 1 – Daten anschauen
-- [ ] Spree-Stationen im Browser öffnen: https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations.json?waters=SOW
+- [x] Spree-Stationen im Browser öffnen: https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations.json?waters=SOW
   (In PEGELONLINE heißt die Spree in Berlin „SOW" = Spree-Oder-Wasserstraße; `waters=SPREE` liefert eine leere Liste.)
-- [ ] Eine Berliner Station auswählen und ihre UUID notieren
+- [x] Eine Berliner Station auswählen und ihre UUID notieren → BERLIN-KÖPENICK `47d3e815-c556-4e1b-93de-9fe07329fb00`
 - [ ] Wetter-JSON von Open-Meteo im Browser anschauen (URL steht in `app.js`)
 - [ ] Doku der Luftdaten-API lesen: https://luftdaten.umweltbundesamt.de/api/air-data/v4/doc
 - [ ] Nächste Luftmessstation finden
@@ -19,7 +19,9 @@ Ziel: Ein Dashboard, das Spree-Wasserstand, Wetter und Luftqualität kombiniert 
 - [x] Git-Repo anlegen und auf GitHub pushen
 
 ## Schritt 3 – Weitere Datenquellen
-- [ ] `fetchWaterLevel()` – aktueller Spree-Wasserstand + Trend
+- [x] `fetchWaterLevel()` – aktueller Spree-Wasserstand
+- [x] `fetchWaterLevel()` prüft `response.ok` (wie `fetchWeather()`)
+- [ ] Trend (steigt / fällt / gleich) aus `measurements.json?start=P1D`
 - [ ] Wasserstand der letzten Tage als Liniendiagramm
 - [ ] `fetchAirQuality()` – Luftqualitätsindex der nächsten Station
 - [ ] `fetchVerse()` – zufälliger Vers des Tages
